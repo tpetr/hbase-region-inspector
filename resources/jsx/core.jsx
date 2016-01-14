@@ -190,7 +190,7 @@ function startDrop (callback) {
         }
 
         $.ajax({
-          url: '/move_region',
+          url: 'move_region',
           method: 'PUT',
           data: {
             src: src,
@@ -230,7 +230,7 @@ function refreshApp (menu, opts) {
   clearTimeout(refresh.timeout)
   refresh.version++
 
-  var url = menu === 'servers' ? '/server_regions.json' : '/table_regions.json'
+  var url = menu === 'servers' ? 'server_regions.json' : 'table_regions.json'
   var currentVersion = refresh.version
   debug(opts)
   $.ajax({
